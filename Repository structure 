@@ -1,0 +1,33 @@
+celoai-market-maker
+│
+├── contracts
+│   ├── MarketMaker.sol       // Smart contract for AMM
+│   └── Rewards.sol           // Smart contract for rewards system
+│
+├── client
+│   ├── public
+│   │   └── index.html        // Main HTML file
+│   ├── src
+│   │   ├── components
+│   │   │   ├── Dashboard.js  // Main trading dashboard
+│   │   │   ├── Trade.js      // Trading component
+│   │   │   └── Rewards.js    // Rewards display component
+│   │   ├── App.js            // Main React app
+│   │   └── index.js          // App entry point
+│   └── package.json          // Client dependencies
+│
+├── server
+│   ├── app.js                // Backend server file
+│   ├── routes
+│   │   └── trades.js         // API routes for trade execution
+│   ├── models
+│   │   └── TradeModel.js     // MongoDB model for trades
+│   └── package.json          // Server dependencies
+│
+├── ai
+│   ├── model.py              // AI model for predictive analytics
+│   ├── train.py              // Script for training AI models
+│   └── requirements.txt      // AI model dependencies
+│
+├── README.md                 // Project overview and instructions
+└── .env                      // Environment variables

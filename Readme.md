@@ -58,32 +58,141 @@ Kenya faces several unique challenges in its digital economy, including:
 - **Frontend**: React, Web3.js
 - **Backend**: Node.js, Express
 
-## Getting Started
+### Instructions for Setup and Running
 
-### Prerequisites
-- Install Node.js and npm.
-- Set up a Celo wallet and obtain cKES tokens (testnet/mainnet).
-- Have Git installed for version control.
 
-### Installation Instructions
+### 1. Prerequisites
 
-1. Clone the repository:
+- **Node.js** (v16 or higher)
+- **npm** or **yarn** (Node Package Manager)
+- **Python** (v3.8 or higher)
+- **Ganache** or **Truffle** (for local blockchain testing)
+- **MetaMask** (browser extension for connecting to the Celo network)
+- **MongoDB** (for backend data storage)
+
+### 2. Clone the Repository
+
+First, clone the repository from GitHub and navigate into the project directory:
+
+```bash
+git clone https://github.com/yourusername/celoai-market-maker.git
+cd celoai-market-maker
+```
+
+### 3. Set Up Environment Variables
+
+Create a `.env` file in the root directory and add the following environment variables:
+
+```plaintext
+# .env file content
+MONGODB_URI=your_mongodb_connection_string
+PORT=5000
+CELO_RPC_URL=https://alfajores-forno.celo-testnet.org  # Celo testnet RPC URL
+PRIVATE_KEY=your_private_key  # Private key for deploying contracts (use only for testing)
+```
+
+Replace `your_mongodb_connection_string` and `your_private_key` with values for your environment.
+
+### 4. Install Dependencies
+
+Navigate to the backend and frontend folders separately to install the required dependencies:
+
+- **Backend Setup:**
+
    ```bash
-   git clone https://github.com/yourusername/celoai-market-maker.git
-   cd celoai-market-maker
-   ```
-
-2. Install the necessary dependencies:
-   ```bash
+   cd server
    npm install
    ```
 
-3. Configure environment variables (e.g., Celo node URL, wallet credentials).
+- **Frontend Setup:**
 
-4. Run the application locally:
    ```bash
-   npm start
+   cd client
+   npm install
    ```
+
+- **AI Model Setup:**
+
+   ```bash
+   cd ai
+   pip install -r requirements.txt
+   ```
+
+### 5. Deploy Smart Contracts
+
+Use a local blockchain environment like Ganache or a Celo testnet. Compile and deploy the smart contracts using Hardhat:
+
+```bash
+cd contracts
+npx hardhat compile
+npx hardhat run scripts/deploy.js --network celoTestnet
+```
+
+This will deploy the contracts to the specified network and output the contract addresses. Update the frontend and backend configuration files with these addresses.
+
+### 6. Run the Backend Server
+
+Start the backend server that handles API requests and interacts with the smart contracts:
+
+```bash
+cd server
+npm start
+```
+
+The backend will run on the port specified in the `.env` file (default is `5000`).
+
+### 7. Run the Frontend Client
+
+Start the frontend React app, which serves as the user interface for trading and reward management:
+
+```bash
+cd client
+npm start
+```
+
+This will start the application on `http://localhost:3000`.
+
+### 8. Train the AI Model
+
+If you want to train or retrain the AI model, use the following command:
+
+```bash
+cd ai
+python train.py
+```
+
+This will train the model on the provided dataset (`market_data.csv`) and save the trained model as `camm_model.pkl`.
+
+### 9. Testing the Application
+
+1. **Trading on CAMM**: Use the trading interface to execute trades and see real-time updates on liquidity and price adjustments.
+   
+2. **Earning Rewards**: Monitor the rewards section to see cKES rewards accrued from trading activities.
+
+3. **AI Insights**: The AI model provides predictive analytics to assist users in making informed trading decisions.
+
+### 10. Connecting to MetaMask
+
+To interact with the smart contracts on the Celo network, configure MetaMask to connect to the Celo testnet:
+
+1. Open MetaMask and add a new network with the following details:
+   - **Network Name**: Celo Testnet
+   - **New RPC URL**: `https://alfajores-forno.celo-testnet.org`
+   - **Chain ID**: 44787
+   - **Currency Symbol**: cUSD
+2. Save and switch to the Celo Testnet network.
+
+### 11. Live Testing
+
+For live testing, connect your browser to `http://localhost:3000`. Ensure MetaMask is set to the Celo network and that you have some test cKES tokens in your wallet to execute trades.
+
+### Troubleshooting
+
+- **Connection Issues**: Ensure that all URLs and private keys in your `.env` file are correct.
+- **Contract Deployment Errors**: Check the Hardhat configuration and ensure the network is correctly set up.
+- **AI Model Errors**: Verify that Python dependencies are correctly installed and the dataset is properly formatted.
+
+
 
 
 

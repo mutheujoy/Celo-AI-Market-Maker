@@ -139,7 +139,7 @@ for this project:
 - The contract `AmmSwap` located at `contracts/AmmSwap.sol` has been deployed to the address `0x3E73365764fBBE4f58Eb0B6a62CA80FC706D851B`.
 - The contract is currently undergoing verification on the block explorer.
 
-###Verification Status
+### Verification Status
 
 - The `AmmSwap` contract has been successfully verified on Etherscan.
 - You can view the verified contract code and details on CeloScan at the following link:

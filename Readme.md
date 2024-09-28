@@ -1,7 +1,7 @@
 # CeloAI Market Maker (CAMM)
 
-##Team Name: CAMM
-##Team Member: Joy Mutheu- Fullstack Developer
+Team Name: CAMM
+Team Member: Joy Mutheu- Fullstack Developer
 
 ## Overview
 
@@ -132,6 +132,19 @@ npx hardhat run scripts/deploy.js --network celoTestnet
 ```
 
 This will deploy the contracts to the specified network and output the contract addresses. Update the frontend and backend configuration files with these addresses.
+
+for this project:
+
+- The source code for the contract was successfully submitted without any compilation requirements.
+- The contract `AmmSwap` located at `contracts/AmmSwap.sol` has been deployed to the address `0x3E73365764fBBE4f58Eb0B6a62CA80FC706D851B`.
+- The contract is currently undergoing verification on the block explorer.
+
+###Verification Status
+
+- The `AmmSwap` contract has been successfully verified on Etherscan.
+- You can view the verified contract code and details on CeloScan at the following link:
+  [View Verified Contract on CeloScan](https://alfajores.celoscan.io/address/0x3E73365764fBBE4f58Eb0B6a62CA80FC706D851B#code)
+
 
 ### 6. Run the Backend Server
 

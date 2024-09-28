@@ -1,5 +1,8 @@
 # CeloAI Market Maker (CAMM)
 
+##Team Name: CAMM
+##Team Member: Joy Mutheu- Fullstack Developer
+
 ## Overview
 
 **CeloAI Market Maker (CAMM)** is an innovative automated market maker (AMM) designed to enhance liquidity, improve trading efficiency, and drive financial inclusion using the Celo Kenya Shilling (cKES). Leveraging advanced artificial intelligence (AI) algorithms, CAMM creates a user-friendly and engaging trading platform that rewards participants and fosters the adoption of cKES in everyday transactions.
